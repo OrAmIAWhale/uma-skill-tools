@@ -1,24 +1,47 @@
 {
   "name": "uma-skill-tool",
   "version": "0.0.1",
-  "description": "",
+  "description": "Global",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11"
   },
   "author": "pecan",
   "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "start": "TZ=utc node dist/index.js",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write .",
+    "test": "VITEST_TS_NODE_PROJECT=tsconfig.test.json vitest run",
+    "test:ui": "VITEST_TS_NODE_PROJECT=tsconfig.test.json vitest --ui"
+  },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/tape": "^4.13.2",
-    "fast-check": "^3.0.1",
-    "tape": "^5.5.3",
-    "ts-node": "^10.8.1",
-    "typescript": "^4.7.4"
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^24.5.2",
+    "@types/tape": "^4.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "fast-check": "^3.23.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "tape": "^5.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
-    "commander": "^9.3.0",
+    "commander": "^9.5.0",
     "google-auth-library": "^8.9.0",
-    "google-spreadsheet": "^4.1.0"
+    "google-spreadsheet": "^4.1.5"
   }
 }

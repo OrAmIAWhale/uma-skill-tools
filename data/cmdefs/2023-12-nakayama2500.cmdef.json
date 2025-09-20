@@ -1,0 +1,26 @@
+{
+  "courseid": 10506,
+  "season": "winter",
+  "groundCondition": "soft",
+  "weather": "snowy",
+  "baseStats": {
+    "speed": 1600,
+    "stamina": 1200,
+    "power": 1200,
+    "guts": 800,
+    "wisdom": 1100
+  },
+  "presupposedSkills": {
+    "front": [900201, 900681],
+    "pace": [202481],
+    "late": [900591, 202421],
+    "end": [900591, 200641]
+  },
+  "totalUmas": 9,
+  "strategyPositions": {
+    "front": [1],
+    "pace": [1, 2, 3, 4],
+    "late": [4, 5, 6, 7, 8, 9],
+    "end": [4, 5, 6, 7, 8, 9]
+  }
+}
